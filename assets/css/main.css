@@ -59,6 +59,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .wordmark {
@@ -79,6 +80,7 @@ a {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .site-nav a:hover {
@@ -313,4 +315,29 @@ blockquote {
   padding-left: 1rem;
   border-left: 3px solid var(--border);
   color: var(--muted);
+}
+
+/* ---------- Mobile ---------- */
+/* Keep last: these override the base rules above at equal specificity. */
+
+/* On narrow screens the wordmark crowds the nav — drop it and center the links */
+@media (max-width: 600px) {
+  .wordmark {
+    display: none;
+  }
+
+  .site-header {
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .site-nav {
+    gap: 0.85rem;
+  }
+
+  .site-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
 }
