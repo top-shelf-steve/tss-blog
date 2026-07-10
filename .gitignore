@@ -2,3 +2,6 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Local-only scratch folder — never uploaded to GitHub
+reference/
