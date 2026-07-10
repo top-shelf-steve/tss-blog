@@ -4,10 +4,8 @@ heading: Kevin O'Connor.
 tagline: Hopefully someone is interested in all of this.
 avatar: /assets/images/ko-profile-1.jpeg
 
-# URL settings — when you move to a custom domain, set url to the domain
-# and change baseurl to "" (empty).
-url: "https://top-shelf-steve.github.io"
-baseurl: "/tss-blog"
+url: "https://kevin.rocvoc.com"
+baseurl: ""
 
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
