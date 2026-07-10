@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class="hero">
+  <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Avatar" width="112" height="112">
+  <h1 class="hero-heading">{{ site.heading }}</h1>
+  <p class="hero-tagline">{{ site.tagline }}</p>
+  <hr class="hero-divider">
+</section>
+
+<section class="post-list">
+  <h2 class="section-title">Latest Posts</h2>
+  {% for post in site.posts limit: 10 %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    <span class="date-badge">
+      <span class="date-month">{{ post.date | date: '%b' }}</span>
+      <span class="date-day">{{ post.date | date: '%-d' }}</span>
+    </span>
+    <span class="post-card-body">
+      <span class="post-card-title">{{ post.title }}</span>
+      <span class="post-card-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 90 }}</span>
+    </span>
+    {% assign words = post.content | number_of_words %}
+    <span class="read-time">{{ words | divided_by: 200 | at_least: 1 }} min read</span>
+  </a>
+  {% endfor %}
+</section>
